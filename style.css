@@ -1,0 +1,65 @@
+[data-theme="light"] {
+  --header-bg-col: rgb(228, 220, 220);
+  --main-bg-col: rgb(125, 189, 229);
+  --footer-bg-col: rgb(254, 52, 167);
+  --text-col: rgb(72, 62, 62);
+}
+[data-theme="dark"] {
+  --header-bg-col: rgb(9, 2, 48);
+  --main-bg-col: rgb(50, 63, 20);
+  --footer-bg-col: rgb(80, 7, 48);
+  --text-col: white;
+}
+[data-theme="hawaii"] {
+  --header-bg-col: rgb(225, 213, 88);
+  --main-bg-col: blue;
+  --footer-bg-col: green;
+  --text-col: rgb(240, 168, 168);
+}
+/* Nulstilling af margin og padding på alle elementer, samt ændring af box model på alle elementer */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Normalisering af font og linjehøjde på dokumentets tekster, samt nedtoning af tekstfarven */
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-size: 2rem;
+  height: 100%;
+}
+
+/* Normalisering af billeder */
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--text-col);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+select {
+  height: fit-content;
+  padding-right: 2rem;
+margin-right: 1rem;
+background-color: transparent;
+border: solid 3px;
+font-size: large;
+font-weight: 500;
+color: var(--text-col);
+}
+main {
+  background-color: var(--main-bg-col);
+  color: var(--text-col);
+  padding-block: 30%;
+}
+footer {
+  background-color: var(--footer-bg-col);
+  color: var(--text-col);
+}
